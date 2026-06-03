@@ -51,6 +51,8 @@ function App() {
 				<LinkCard type='linkedin'/>
 				<LinkCard type='resume'/>
 				<LinkCard type='github'/>
+				<LinkCard type='kitgrail'/>
+				<LinkCard type='photography'/>
 			</Box>
 		</Box>
 	)

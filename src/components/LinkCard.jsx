@@ -7,6 +7,8 @@ import Typography from '@mui/material/Typography';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import DescriptionIcon from '@mui/icons-material/Description';
+import CameraIcon from '@mui/icons-material/Camera';
+import CheckroomIcon from '@mui/icons-material/Checkroom';
 
 
 export const LinkCard = ({type}) => {
@@ -15,6 +17,8 @@ export const LinkCard = ({type}) => {
         linkedin: {title: 'LinkedIn', icon: <LinkedInIcon sx={{fontSize: fontsize}}/>},
         resume: {title: 'Resume', icon: <DescriptionIcon sx={{fontSize: fontsize}}/>},
         github: {title: 'GitHub', icon: <GitHubIcon sx={{fontSize: fontsize}}/>},
+        photography: {title: 'Photography Portfolio', icon: <CameraIcon sx={{fontSize: fontsize}} />},
+        kitgrail: {title: 'Marketplace Project', icon: <CheckroomIcon sx={{fontSize: fontsize}} />}
     };
 
     const card = (
