@@ -23,6 +23,9 @@ Once it finishes installing, you can then run the app:
 npm run dev
 ```
 
+## Dev Notes
+As I was writing 
+
 
 REQUIREMENTS IN THE README
 - [ ] mention Vite
