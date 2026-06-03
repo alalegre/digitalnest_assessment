@@ -1,5 +1,5 @@
 # Personal Linktree
-A react webpage created using Vite built for personal use and for DigitalNEST's technical assessment. 
+A linktree-style react webpage created using Vite built for personal use and for DigitalNEST's technical assessment. 
 
 
 
