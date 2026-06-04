@@ -23,7 +23,6 @@ export const LinkCard = ({type}) => {
     };
 
 
-
     const card = (
         <Card>
             <CardActionArea
@@ -53,7 +52,7 @@ export const LinkCard = ({type}) => {
     );
 
     return (
-        <Box sx={{minWidth: 550}}>
+        <Box sx={{minWidth: {xs: 100, md: 400, lg: 550}}}>
             {card}
         </Box>
     );
