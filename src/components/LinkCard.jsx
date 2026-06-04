@@ -10,20 +10,27 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import CameraIcon from '@mui/icons-material/Camera';
 import CheckroomIcon from '@mui/icons-material/Checkroom';
 
+import ResumeFile from '../assets/Aldridge_Alegre_Resume.pdf';
 
 export const LinkCard = ({type}) => {
     const fontsize = 50;
     const lookup = {
-        linkedin: {title: 'LinkedIn', icon: <LinkedInIcon sx={{fontSize: fontsize}}/>},
-        resume: {title: 'Resume', icon: <DescriptionIcon sx={{fontSize: fontsize}}/>},
-        github: {title: 'GitHub', icon: <GitHubIcon sx={{fontSize: fontsize}}/>},
-        photography: {title: 'Photography Portfolio', icon: <CameraIcon sx={{fontSize: fontsize}} />},
-        kitgrail: {title: 'Marketplace Project', icon: <CheckroomIcon sx={{fontSize: fontsize}} />}
+        linkedin: {title: 'LinkedIn', icon: <LinkedInIcon sx={{fontSize: fontsize}}/>, link: 'https://www.linkedin.com/in/alalegre/'},
+        resume: {title: 'Resume', icon: <DescriptionIcon sx={{fontSize: fontsize}}/>, link: ResumeFile, download: true},
+        github: {title: 'GitHub', icon: <GitHubIcon sx={{fontSize: fontsize}}/>, link: 'https://github.com/alalegre'},
+        photography: {title: 'Photography Portfolio', icon: <CameraIcon sx={{fontSize: fontsize}} />, link: 'https://aldridgephotography7.mypixieset.com/'},
+        kitgrail: {title: 'Marketplace Project', icon: <CheckroomIcon sx={{fontSize: fontsize}} />, link: 'https://kitgrail.com/listings'}
     };
+
+
 
     const card = (
         <Card>
-            <CardActionArea>
+            <CardActionArea
+                href={lookup[type].link}
+                download={lookup[type].download || undefined}
+                target="_blank" rel="noopener noreferrer"
+            >
                 <CardContent>
                     <Box
                         sx={{
@@ -46,7 +53,7 @@ export const LinkCard = ({type}) => {
     );
 
     return (
-        <Box sx={{minWidth: 475}}>
+        <Box sx={{minWidth: 550}}>
             {card}
         </Box>
     );
