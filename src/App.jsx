@@ -39,7 +39,7 @@ function App() {
 					variant='subtitle1'
 					sx={{maxWidth: 250, font: font}}
 				>
-					Inspiring fullstack engineer with a passion for photography and gundams
+					Aspiring fullstack engineer with a passion for photography and gundams
 				</Typography>
 			</Box>
 			<Box
