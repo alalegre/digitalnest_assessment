@@ -23,6 +23,7 @@ export const Info = () => {
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'center',
+                    pb: {xs: 3, md: 0}
                 }}
             >
                 <Avatar
@@ -40,7 +41,7 @@ export const Info = () => {
                     variant='subtitle1'
                     sx={{maxWidth: 250, font: font, color: isLight ? 'black' : 'white'}}
                 >
-                    Aspiring fullstack engineer with a passion for photography and gundams
+                    Aspiring fullstack engineer with a passion for photography and Gundams
                 </Typography>
             </Box>
         </Grid>
