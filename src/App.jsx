@@ -22,8 +22,8 @@ function App() {
 				flexGrow: 1,
 				overflow: {md: 'hidden', lg: 'hidden'},
 				pb: {xs: padding, md: 0},
-				pl: padding,
-				pr: padding,
+				pl: {xs: padding, md: 0},
+				pr: {xs: padding, md: 0},
 				background: isLight
 					? 'linear-gradient(15deg, rgba(208,184,172,1) 0%, rgba(239,229,220,1) 50%, rgba(255,255,255,1) 100%)'
 					: 'linear-gradient(15deg, #1a1a2e 0%, #16213e 50%, #0c4284 100%)',
