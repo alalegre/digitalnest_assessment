@@ -13,11 +13,12 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 import ResumeFile from '../assets/Aldridge_Alegre_Resume.pdf';
 
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { LightModeContext } from '../context/LightModeContext';
 import { IconButton } from '@mui/material';
 
 export const LinkCard = ({type}) => {
+    const [beingHovered, setBeingHovered] = useState(false);
     const isLight = useContext(LightModeContext);
     const fontsize = 50;
     const color = isLight ? 'black' : 'white';
@@ -30,16 +31,23 @@ export const LinkCard = ({type}) => {
     };
 
     const fontcolor = {color: isLight ? 'black' : 'white'};
+    // const hover = 
 
     const handleCopyLink = (link) => {
         navigator.clipboard.writeText(link)
     }
 
+    const handleMouseEnter = () => {
+        setBeingHovered(true);
+    }
+
+    const handleMouseLeave = () => {
+        setBeingHovered(false);
+    }
+
     const card = (
         <Card
             sx={{
-                transition: 'transform 0.2s',
-                "&:hover": {transform: 'scale(1.05)'},
                 backgroundColor: isLight ? 'white' : '#00072d',
             }}
         >
@@ -100,7 +108,15 @@ export const LinkCard = ({type}) => {
     );
 
     return (
-        <Box sx={{minWidth: {xs: 100, md: 250, lg: 500}}}>
+        <Box
+            sx={{
+                minWidth: {xs: 100, md: 250, lg: 500},
+                transition: 'transform 0.2s',
+                transform: beingHovered ? 'scale(1.05)' : 'scale(1)',
+            }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+        >
             {card}
         </Box>
     );
