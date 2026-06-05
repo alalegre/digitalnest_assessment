@@ -80,8 +80,12 @@ export const LinkCard = ({type}) => {
                             </Box>
                             {lookup[type].title == 'Resume' ? '' :
                                 <Box>
-                                    <IconButton onClick={(e) => { e.stopPropagation(); e.preventDefault(); handleCopyLink(lookup[type].link); }}>
-                                        <ContentCopyIcon />
+                                    <IconButton onClick={(e) => {
+                                        e.stopPropagation();
+                                        e.preventDefault();
+                                        handleCopyLink(lookup[type].link);
+                                    }}>
+                                        <ContentCopyIcon sx={{color: color}}/>
                                     </IconButton>
                                 </Box>
                             }
