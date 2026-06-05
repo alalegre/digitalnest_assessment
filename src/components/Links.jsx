@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import Divider from '@mui/material/Divider';
 
 import { useContext } from 'react';
-import { LightModeContext } from '../App';
+import { LightModeContext } from '../context/LightModeContext';
 
 import { LinkCard } from './LinkCard';
 

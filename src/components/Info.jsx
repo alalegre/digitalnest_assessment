@@ -6,7 +6,7 @@ import Avatar from '@mui/material/Avatar';
 import photo from '../assets/photo.png';
 import { useContext } from 'react';
 
-import { LightModeContext } from '../App';
+import { LightModeContext } from '../context/LightModeContext';
 
 export const Info = () => {
     const hw = 325;

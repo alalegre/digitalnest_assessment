@@ -13,7 +13,7 @@ import CheckroomIcon from '@mui/icons-material/Checkroom';
 import ResumeFile from '../assets/Aldridge_Alegre_Resume.pdf';
 
 import { useContext } from 'react';
-import { LightModeContext } from '../App';
+import { LightModeContext } from '../context/LightModeContext';
 
 export const LinkCard = ({type}) => {
     const isLight = useContext(LightModeContext);

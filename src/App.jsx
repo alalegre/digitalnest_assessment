@@ -1,5 +1,5 @@
 import './App.css'
-import { createContext, useState } from 'react';
+import { useState } from 'react';
 
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -7,8 +7,7 @@ import Grid from '@mui/material/Grid';
 import { Info } from './components/Info';
 import { Links } from './components/Links';
 import { LightMode } from './components/LightMode';
-
-export const LightModeContext = createContext();
+import { LightModeContext } from './context/LightModeContext';
 
 function App() {
 	const [isLight, setIsLight] = useState(() => localStorage.getItem('isLight') !== 'false');
