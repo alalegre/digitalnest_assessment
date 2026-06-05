@@ -37,7 +37,7 @@ function App() {
 				}}
 			>
 				<Grid
-					size={{xs: 12, md: 6, lg: 6}}
+					size={{xs: 12, s: 6, md: 6, lg: 6}}
 				>
 					<Box
 						sx={{
@@ -49,7 +49,11 @@ function App() {
 					>
 						<Avatar
 							src={photo}
-							sx={{width: hw, height: hw}}
+							sx={{
+								width: {xs: 200, s: hw, md: hw, lg: hw},
+								height: {xs: 200, s: hw, md: hw, lg: hw},
+								mt: {xs: 4, md: 0}
+							}}
 						/>
 						<Typography variant='overline' sx={{fontSize: 25, font: font}}>
 							Aldridge Alegre
@@ -63,7 +67,7 @@ function App() {
 					</Box>
 				</Grid>
 				<Grid
-				size={{xs: 12, md: 6, lg: 6}}
+				size={{xs: 12, s: 6, md: 6, lg: 6}}
 				>
 					<Box
 						sx={{

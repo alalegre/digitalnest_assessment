@@ -24,7 +24,12 @@ export const LinkCard = ({type}) => {
 
 
     const card = (
-        <Card>
+        <Card
+            sx={{
+                transition: 'transform 0.2s',
+                "&:hover": {transform: 'scale(1.05)'},
+            }}
+        >
             <CardActionArea
                 href={lookup[type].link}
                 download={lookup[type].download || undefined}
