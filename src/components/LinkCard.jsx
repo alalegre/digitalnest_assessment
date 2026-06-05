@@ -9,11 +9,13 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import DescriptionIcon from '@mui/icons-material/Description';
 import CameraIcon from '@mui/icons-material/Camera';
 import CheckroomIcon from '@mui/icons-material/Checkroom';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 import ResumeFile from '../assets/Aldridge_Alegre_Resume.pdf';
 
 import { useContext } from 'react';
 import { LightModeContext } from '../context/LightModeContext';
+import { IconButton } from '@mui/material';
 
 export const LinkCard = ({type}) => {
     const isLight = useContext(LightModeContext);
@@ -29,6 +31,10 @@ export const LinkCard = ({type}) => {
 
     const fontcolor = {color: isLight ? 'black' : 'white'};
 
+    const handleCopyLink = (link) => {
+        navigator.clipboard.writeText(link)
+    }
+
     const card = (
         <Card
             sx={{
@@ -37,29 +43,55 @@ export const LinkCard = ({type}) => {
                 backgroundColor: isLight ? 'white' : '#00072d',
             }}
         >
-            <CardActionArea
-                href={lookup[type].link}
-                download={lookup[type].download || undefined}
-                target="_blank" rel="noopener noreferrer"
+            <Box
+                sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    width: '100%'
+                }}
             >
-                <CardContent>
-                    <Box
-                        sx={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: 4,
-                        }}
+                <Box sx={{flexGrow: 1}}>
+                    <CardActionArea
+                        href={lookup[type].link}
+                        download={lookup[type].download || undefined}
+                        target="_blank" rel="noopener noreferrer"
                     >
-                        {lookup[type].icon}
-                        <Typography
-                            variant='overline'
-                            sx={{fontSize: 20, ...fontcolor}} // merges fontcolor obj with fontSize
+                        <CardContent
+                            sx={{
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center',
+                            }}
                         >
-                            {lookup[type].title}
-                        </Typography>
-                    </Box>
-                </CardContent>
-            </CardActionArea>
+                            <Box
+                                sx={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: 4,
+                                }}
+                            >
+                                {lookup[type].icon}
+                                <Typography
+                                    variant='overline'
+                                    sx={{fontSize: 20, ...fontcolor}} // merges fontcolor obj with fontSize
+                                >
+                                    {lookup[type].title}
+                                </Typography>
+                            </Box>
+                            {lookup[type].title == 'Resume' ? '' :
+                                <Box>
+                                    <IconButton onClick={(e) => { e.stopPropagation(); e.preventDefault(); handleCopyLink(lookup[type].link); }}>
+                                        <ContentCopyIcon />
+                                    </IconButton>
+                                </Box>
+                            }
+                        </CardContent>
+                    </CardActionArea>
+                </Box>
+                <Box>
+                    
+                </Box>
+            </Box>
         </Card>
     );
 

@@ -1,9 +1,12 @@
 # Personal Linktree
-A linktree-style react webpage created using Vite built for personal use and for DigitalNEST's technical assessment. 
+A linktree-style react webpage created using Vite built for personal use and for DigitalNEST's technical assessment. This project utilized React MUI for its UI components and easy responsive design.
 
 
 
 ## Features
+The linktree web app features a button that toggles between light and dark mode. Just click the button on the top right, and the colors change! This is persitent, even after a page refresh via `localStorage`. The reason why I picked this feature is because we often times scroll in the dark, so having darker colors in our screen help reduce the strain we get in our eyes. The tricky part in implementing this was making sure I properly use React's `useContext` so that I avoid prop drilling, saving me from headache and lines of code.
+
+The second feature is click-to-copy. Each link card has a copy button on the right that lets you copy the URL straight to your clipboard. No need to open the link, copy it from the address bar, and then head back. Just click copy and you're done! The tricky part was that clicking the copy button was also triggering the card to open the link. The fix was simple though, just stopping the event from bubbling up to the parent with `e.stopPropagation()`.
 
 ## Quick Start
 ### Clone the repo
@@ -44,12 +47,3 @@ but that got rid of ALL of the scrolling capabilities. I was stuck, so I asked C
   }
 }
 ```
-
-REQUIREMENTS IN THE README
-- [ ] mention Vite
-- [ ] usage of React MUI
-- [ ] a few sentences of the JS feature
-    - [ ] what it does
-    - [ ] why i picked it
-    - [ ] anything tricky
-    - [ ] how it works
