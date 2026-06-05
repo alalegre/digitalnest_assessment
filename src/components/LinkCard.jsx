@@ -100,7 +100,7 @@ export const LinkCard = ({type}) => {
     );
 
     return (
-        <Box sx={{minWidth: {xs: 100, md: 400, lg: 550}}}>
+        <Box sx={{minWidth: {xs: 100, md: 250, lg: 500}}}>
             {card}
         </Box>
     );

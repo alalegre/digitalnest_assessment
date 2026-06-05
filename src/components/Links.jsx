@@ -21,6 +21,9 @@ export const Links = () => {
                     gap: 5,
                     flexDirection: 'column',
 
+                    // Applied only in smaller desktop screens e.g. Google Nest Hub
+                    pt: {md: 3},
+                    pb: {md: 3}
                 }}
             >
                 <Typography variant='h4' sx={fontcolor}>Social Links</Typography>

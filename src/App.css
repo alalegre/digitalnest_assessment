@@ -2,8 +2,9 @@ body {
   margin: 0;
 }
 
-/* Only takes into effect if the width of the screen is at least 1200px */
-@media (min-width: 1200px) {
+/* Only takes into effect if the width of the screen is at least 1300px */
+/* 1300px to account for Google Nest Hub Max res */
+@media (min-width: 1300px) {
   body {
     overflow: hidden;
   }
