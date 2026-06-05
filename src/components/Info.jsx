@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Avatar from '@mui/material/Avatar';
 
-import photo from './assets/photo.png';
+import photo from '../assets/photo.png';
 
 export const Info = () => {
     const hw = 325;
