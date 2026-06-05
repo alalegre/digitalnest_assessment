@@ -1,5 +1,5 @@
 import './App.css'
-import { useState } from 'react';
+import { createContext, useState } from 'react';
 
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -7,6 +7,8 @@ import Grid from '@mui/material/Grid';
 import { Info } from './components/Info';
 import { Links } from './components/Links';
 import { LightMode } from './components/LightMode';
+
+export const LightModeContext = createContext();
 
 function App() {
 	const [isLight, setIsLight] = useState(() => localStorage.getItem('isLight') !== 'false');
@@ -25,7 +27,7 @@ function App() {
 				pr: padding,
 				background: isLight
 					? 'linear-gradient(15deg, rgba(208,184,172,1) 0%, rgba(239,229,220,1) 50%, rgba(255,255,255,1) 100%)'
-					: 'linear-gradient(15deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
+					: 'linear-gradient(15deg, #1a1a2e 0%, #16213e 50%, #0c4284 100%)',
 				transition: 'background 0.3s',
 			}}
 		>
@@ -39,8 +41,10 @@ function App() {
 					alignItems: 'center',
 				}}
 			>
-				<Info />
-				<Links />
+				<LightModeContext.Provider value={isLight}>
+					<Info />
+					<Links />
+				</LightModeContext.Provider>
 			</Grid>
 		</Box>
 	)
