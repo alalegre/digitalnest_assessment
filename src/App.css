@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 /* Only takes into effect if the width of the screen is at least 1200px */
 @media (min-width: 1200px) {
   body {
@@ -5,7 +9,3 @@
   }
 }
 
-body {
-  background: #D0B8AC;
-  background: linear-gradient(15deg, rgba(208, 184, 172, 1) 0%, rgba(239, 229, 220, 1) 50%, rgba(255, 255, 255, 1) 100%);
-}

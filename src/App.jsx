@@ -23,6 +23,10 @@ function App() {
 				pb: {xs: padding, md: 0},
 				pl: padding,
 				pr: padding,
+				background: isLight
+					? 'linear-gradient(15deg, rgba(208,184,172,1) 0%, rgba(239,229,220,1) 50%, rgba(255,255,255,1) 100%)'
+					: 'linear-gradient(15deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
+				transition: 'background 0.3s',
 			}}
 		>
 			<LightMode isLight={isLight} setIsLight={setIsLight} />
