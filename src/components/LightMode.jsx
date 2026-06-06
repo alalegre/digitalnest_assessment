@@ -19,8 +19,19 @@ export const LightMode = ({ isLight, setIsLight }) => {
                 zIndex: 1000,
             }}
         >
-            <Fab size='secondary' color='red' onClick={handleClick}>
-                <LightModeIcon />
+            <Fab
+                size='secondary'
+                onClick={handleClick}
+                sx={{
+                    bgcolor: isLight ? '#0c4284' : '#D0B8AC',
+                    '&:hover': {
+                        bgcolor: isLight ? '#1976e7' : '#de895e'
+                    },
+                }}
+            >
+                <LightModeIcon sx={{
+                    color: isLight ? 'white' : 'black',
+                }}/>
             </Fab>
         </Box>
     )
