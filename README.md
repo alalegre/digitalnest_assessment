@@ -17,7 +17,7 @@ git clone git@github.com:alalegre/digitalnest_assessment.git
 Then move into that folder and install npm
 
 ```
-cd ...
+cd digitalnest_assessment
 npm install
 ```
 
