@@ -15,7 +15,8 @@ export const LightMode = ({ isLight, setIsLight }) => {
             sx={{
                 position: 'fixed',
                 top: 30,
-                right: 30
+                right: 30,
+                zIndex: 1000,
             }}
         >
             <Fab size='secondary' color='red' onClick={handleClick}>
