@@ -41,7 +41,7 @@ export const Info = () => {
                     variant='subtitle1'
                     sx={{maxWidth: 250, font: font, color: isLight ? 'black' : 'white'}}
                 >
-                    Aspiring fullstack engineer with a passion for photography and Gundams
+                    Aspiring fullstack engineer and photographer based in the Bay Area
                 </Typography>
             </Box>
         </Grid>
